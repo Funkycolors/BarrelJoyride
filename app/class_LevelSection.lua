@@ -9,7 +9,9 @@ function LevelSection:new( parentGroup, definition )
 	setmetatable( self, LevelSection_mt )
 	
 	self._back = display.newImage( parentGroup, definition.back, true )
-	
+	self._back.x = display.contentCenterX
+	self._back.y = display.contentCenterY
+
 	self._coins = {}
 	self._zappers = {}
 	self._missiles = {}
